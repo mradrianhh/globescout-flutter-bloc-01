@@ -19,7 +19,7 @@ class PlayersLoaded extends PlayersState {
   List<Object> get props => [players];
 
   @override
-  String toString() => 'TodosLoaded { todos: $players }';
+  String toString() => 'PlayersLoaded { players: $players }';
 }
 
 class PlayersNotLoaded extends PlayersState {}

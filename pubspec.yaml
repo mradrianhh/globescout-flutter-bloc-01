@@ -16,6 +16,8 @@ dependencies:
     path: user_repository
   team_repository:
     path: team_repository
+  scouting_repository:
+    path: scouting_repository
   equatable: ^1.0.0
   meta: ^1.0.0
 
