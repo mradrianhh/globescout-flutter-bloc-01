@@ -1,0 +1,1 @@
+export "scouting_entity.dart";
