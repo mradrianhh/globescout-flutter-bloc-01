@@ -7,6 +7,7 @@ import "package:user_repository/user_repository.dart";
 import 'blocs/authentication_bloc/bloc.dart';
 import "blocs/players/players.dart";
 import 'blocs/scoutings/scoutings.dart';
+import 'color_palette.dart';
 import 'screens/main_screen.dart';
 
 class App extends StatelessWidget {
@@ -40,7 +41,29 @@ class App extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: "Globescout Bloc",
         home: MainScreen(),
-      )
+        theme: ThemeData(
+          backgroundColor: Colors.white,
+          primaryColor: ColorPalette.primaryColor,
+          primaryColorLight: ColorPalette.primaryLightColor,
+          primaryColorDark: ColorPalette.primaryDarkColor,
+          accentColor: Colors.blueAccent,
+          appBarTheme: AppBarTheme(
+            color: Colors.white,
+            elevation: 0.0,
+            iconTheme: IconThemeData(
+              color: ColorPalette.secondaryColor,
+              size: 30.0,
+            ),
+            textTheme: TextTheme(
+              title: TextStyle(
+                fontSize: 38.0,
+                color: ColorPalette.secondaryDarkColor,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
