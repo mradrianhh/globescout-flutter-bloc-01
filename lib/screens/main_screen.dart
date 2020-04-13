@@ -79,7 +79,7 @@ class MainScreen extends StatelessWidget {
                   child: ListView.builder(
                     padding: EdgeInsets.all(10.0),
                     scrollDirection: Axis.horizontal,
-                    itemCount: _playerCount,
+                    itemCount: _scoutingCount,
                     itemBuilder: (context, index) {
                       if (index == 0) {
                         return Hero(
