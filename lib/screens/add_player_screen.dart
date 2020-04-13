@@ -12,7 +12,8 @@ class _AddPlayerScreenState extends State<AddPlayerScreen> {
       appBar: AppBar(
         title: Text(
           "Add Player",
-        )
+        ),
+        centerTitle: true,
       ),
     );
   }

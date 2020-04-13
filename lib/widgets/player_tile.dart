@@ -4,15 +4,14 @@ import '../color_palette.dart';
 import 'player_header.dart';
 
 class PlayerTile extends StatelessWidget {
-  final Function(DismissDirection) onDismissed;
+  //final Function(DismissDirection) onDismissed;
 
-  const PlayerTile({Key key, @required this.onDismissed}) : super(key: key);
+  const PlayerTile({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Dismissible(
         key: UniqueKey(),
-        onDismissed: onDismissed,
         direction: DismissDirection.up,
         child: Card(
             color: ColorPalette.primaryColor,

@@ -12,7 +12,8 @@ class _AddScoutingScreenState extends State<AddScoutingScreen> {
       appBar: AppBar(
         title: Text(
           "Add Scouting"
-        )
+        ),
+        centerTitle: true,
       ),
     );
   }

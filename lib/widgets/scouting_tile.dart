@@ -4,15 +4,11 @@ import '../color_palette.dart';
 import 'scouting_header.dart';
 
 class ScoutingTile extends StatelessWidget {
-  final Function(DismissDirection) onDismissed;
-
-  const ScoutingTile({Key key, @required this.onDismissed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Dismissible(
         key: UniqueKey(),
-        onDismissed: onDismissed,
         direction: DismissDirection.up,
         child: Card(
             color: ColorPalette.primaryColor,

@@ -3,15 +3,20 @@ import 'package:flutter/material.dart';
 import '../widgets/add_card.dart';
 import '../widgets/player_tile.dart';
 import '../widgets/scouting_tile.dart';
+import 'add_player_screen.dart';
+import 'add_scouting_screen.dart';
 
-class MainScreen extends StatefulWidget {
-  @override
-  _MainScreenState createState() => _MainScreenState();
-}
+class MainScreen extends StatelessWidget {
+  final int _playerCount = 10;
+  final int _scoutingCount = 10; // Temporary variables to create a temporary list of player and scouting tiles.
 
-class _MainScreenState extends State<MainScreen> {
-  int _playerCount = 10;
-  int _scoutingCount = 10; // Temporary variables to create a temporary list of player and scouting tiles.
+  void _addPlayerTapped(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddPlayerScreen()));
+  }
+
+  void _addScoutingTapped(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddScoutingScreen()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,11 +66,11 @@ class _MainScreenState extends State<MainScreen> {
                         return Hero(
                             tag: "add_player_hero",
                             child: AddCard(
-                              addTapped: () => _playerCount++,
+                              addTapped: () => _addPlayerTapped(context),
                               text: "ADD PLAYER",
                             ));
                       }
-                      return PlayerTile(onDismissed: (direction) => _playerCount--);
+                      return PlayerTile();
                     },
                   ),
                 ),
@@ -81,10 +86,10 @@ class _MainScreenState extends State<MainScreen> {
                             tag: "add_scouting_hero",
                             child: AddCard(
                               text: "ADD SCOUTING",
-                              addTapped: () => _playerCount++,
+                              addTapped: () => _addScoutingTapped(context),
                             ));
                       }
-                      return ScoutingTile(onDismissed: (direction) => _scoutingCount--,);
+                      return ScoutingTile();
                     },
                   ),
                 ),
