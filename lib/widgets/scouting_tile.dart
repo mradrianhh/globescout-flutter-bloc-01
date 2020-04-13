@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../color_palette.dart';
-import 'player_header.dart';
+import 'scouting_header.dart';
 
 class ScoutingTile extends StatelessWidget {
   final Function(DismissDirection) onDismissed;
@@ -21,7 +21,7 @@ class ScoutingTile extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    PlayerHeader(),
+                    ScoutingHeader(),
                     Divider(
                       thickness: 4.0,
                       color: Colors.white,
