@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'player_screen.dart';
-
 class AddPlayerScreen extends StatefulWidget {
   @override
   _AddPlayerScreenState createState() => _AddPlayerScreenState();
@@ -11,7 +9,7 @@ class _AddPlayerScreenState extends State<AddPlayerScreen> {
   int _currentStep = 0;
 
   next() {
-    _currentStep + 1 != steps.length ? goTo(_currentStep + 1) : Navigator.of(context).push(MaterialPageRoute(builder: (context) => PlayerScreen()));
+    _currentStep + 1 != steps.length ? goTo(_currentStep + 1) : Navigator.of(context).pushNamed("/player");
   }
 
   goTo(int step) {

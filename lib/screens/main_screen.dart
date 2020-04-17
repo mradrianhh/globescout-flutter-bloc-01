@@ -11,11 +11,11 @@ class MainScreen extends StatelessWidget {
   final int _scoutingCount = 10; // Temporary variables to create a temporary list of player and scouting tiles.
 
   void _addPlayerTapped(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddPlayerScreen()));
+    Navigator.of(context).pushNamed("/add_player");
   }
 
   void _addScoutingTapped(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddScoutingScreen()));
+    Navigator.of(context).pushNamed("/add_scouting");
   }
 
   @override

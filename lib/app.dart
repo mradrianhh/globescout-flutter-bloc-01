@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:globescout_bloc_01/screens/add_player_screen.dart';
+import 'package:globescout_bloc_01/screens/add_scouting_screen.dart';
+import 'package:globescout_bloc_01/screens/player_screen.dart';
+import 'package:globescout_bloc_01/widgets/player_details.dart';
 import 'package:player_repository/player_repository.dart';
 import 'package:scouting_repository/scouting_repository.dart';
 import "package:user_repository/user_repository.dart";
@@ -39,8 +43,14 @@ class App extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
+        routes: {
+          "/": (context) => MainScreen(),
+          "/add_player": (context) => AddPlayerScreen(),
+          "/player": (context) => PlayerScreen(),
+          "/add_scouting": (context) => AddScoutingScreen(),
+        },
+        initialRoute: "/",
         title: "Globescout Bloc",
-        home: MainScreen(),
         theme: ThemeData(
           backgroundColor: Colors.white,
           primaryColor: ColorPalette.primaryColor,
