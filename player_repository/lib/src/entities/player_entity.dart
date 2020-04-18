@@ -6,8 +6,10 @@ class PlayerEntity extends Equatable{
   final String name;
   final String position;
   final int number;
+  final int height; // Height in centimeters with format as given in example. Ex: 184 cm.
+  final int weight; // Weight in kilos with format as given in example. Ex: 74 kg.
 
-  const PlayerEntity(this.id, this.name, this.position, this.number);
+  const PlayerEntity(this.id, this.name, this.position, this.number, this.height, this.weight);
 
   @override
   List<Object> get props => [id, name, position, number];
