@@ -11,7 +11,7 @@ class Player {
 
   Player({String id, String name = "", String position = "", this.number}) : this.id = id, this.name = name ?? "", this.position = position ?? "";
 
-  @override
+  @override 
   int get hashCode => id.hashCode ^ name.hashCode ^ position.hashCode ^ number.hashCode;
 
   @override
@@ -27,7 +27,7 @@ class Player {
     return "Player {id: $id, name: $name, position: $position, number: $number}";
   }
 
-  Player copyWith({String id, String name, String position, String number}){
+  Player copyWith({String id, String name, String position, int number}){
     return Player(
       id: id ?? this.id,
       name: name ?? this.name,

@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import '../widgets/add_card.dart';
 import '../widgets/player_tile.dart';
 import '../widgets/scouting_tile.dart';
-import 'add_player_screen.dart';
-import 'add_scouting_screen.dart';
 
 class MainScreen extends StatelessWidget {
   final int _playerCount = 10;

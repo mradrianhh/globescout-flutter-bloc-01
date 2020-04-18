@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:globescout_bloc_01/screens/add_player_screen.dart';
 import 'package:globescout_bloc_01/screens/add_scouting_screen.dart';
 import 'package:globescout_bloc_01/screens/player_screen.dart';
-import 'package:globescout_bloc_01/widgets/player_details.dart';
 import 'package:player_repository/player_repository.dart';
 import 'package:scouting_repository/scouting_repository.dart';
 import "package:user_repository/user_repository.dart";
