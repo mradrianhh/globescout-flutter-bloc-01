@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:globescout_bloc_01/screens/add_player_screen.dart';
 import 'package:globescout_bloc_01/screens/add_scouting_screen.dart';
+import 'package:globescout_bloc_01/screens/login_screen.dart';
 import 'package:globescout_bloc_01/screens/player_screen.dart';
+import 'package:globescout_bloc_01/screens/settings_screen.dart';
+import 'package:globescout_bloc_01/screens/stats_screen.dart';
 import 'package:player_repository/player_repository.dart';
 import 'package:scouting_repository/scouting_repository.dart';
 import "package:user_repository/user_repository.dart";
@@ -43,10 +46,13 @@ class App extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: {
+          "/login": (context) => LoginScreen(),
           "/": (context) => MainScreen(),
           "/add_player": (context) => AddPlayerScreen(),
           "/player": (context) => PlayerScreen(),
           "/add_scouting": (context) => AddScoutingScreen(),
+          "/stats": (context) => StatsScreen(),
+          "/settings": (context) => SettingsScreen(),
         },
         initialRoute: "/",
         title: "Globescout Bloc",
