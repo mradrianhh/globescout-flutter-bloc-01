@@ -3,7 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:globescout_bloc_01/screens/add_player_screen.dart';
 import 'package:globescout_bloc_01/screens/add_scouting_screen.dart';
 import 'package:globescout_bloc_01/screens/login_screen.dart';
+import 'package:globescout_bloc_01/screens/match_screen.dart';
 import 'package:globescout_bloc_01/screens/player_screen.dart';
+import 'package:globescout_bloc_01/screens/post_match_screen.dart';
 import 'package:globescout_bloc_01/screens/scouting_screen.dart';
 import 'package:globescout_bloc_01/screens/settings_screen.dart';
 import 'package:globescout_bloc_01/screens/stats_screen.dart';
@@ -55,6 +57,8 @@ class App extends StatelessWidget {
           "/stats": (context) => StatsScreen(),
           "/settings": (context) => SettingsScreen(),
           "/scouting": (context) => ScoutingScreen(),
+          "/match": (context) => MatchScreen(),
+          "/post_match": (context) => PostMatchScreen(),
         },
         initialRoute: "/",
         title: "Globescout Bloc",
