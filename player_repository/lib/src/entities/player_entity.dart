@@ -12,11 +12,11 @@ class PlayerEntity extends Equatable{
   const PlayerEntity(this.id, this.name, this.position, this.number, this.height, this.weight);
 
   @override
-  List<Object> get props => [id, name, position, number];
+  List<Object> get props => [id, name, position, number, height, weight];
 
   @override
   String toString() {
-    return "PlayerEntity {id: $id, name: $name, position: $position, number: $number}";
+    return "PlayerEntity {id: $id, name: $name, position: $position, number: $number, height: $height, weight: $weight}";
   }
 
   Map<String, Object> toJson() {
@@ -24,7 +24,9 @@ class PlayerEntity extends Equatable{
       "id": id,
       "name": name,
       "position": position,
-      "number": number
+      "number": number,
+      "height": height,
+      "weight": weight,
     };
   }
 
@@ -33,7 +35,9 @@ class PlayerEntity extends Equatable{
       json["id"] as String,
       json["name"] as String,
       json["position"] as String,
-      json["number"] as int
+      json["number"] as int,
+      json["height"] as int,
+      json["weight"] as int,
     );
   }
 
@@ -42,7 +46,9 @@ class PlayerEntity extends Equatable{
       snap.documentID,
       snap.data["name"],
       snap.data["position"],
-      snap.data["number"]
+      snap.data["number"],
+      snap.data["height"],
+      snap.data["weight"],
     );
   }
 
@@ -50,7 +56,9 @@ class PlayerEntity extends Equatable{
     return {
       "name": name,
       "position": position,
-      "number": number
+      "number": number,
+      "height": height,
+      "weight": weight,
     };
   }
 }
