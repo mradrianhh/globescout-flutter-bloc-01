@@ -4,6 +4,7 @@ import 'package:globescout_bloc_01/screens/add_player_screen.dart';
 import 'package:globescout_bloc_01/screens/add_scouting_screen.dart';
 import 'package:globescout_bloc_01/screens/login_screen.dart';
 import 'package:globescout_bloc_01/screens/player_screen.dart';
+import 'package:globescout_bloc_01/screens/scouting_screen.dart';
 import 'package:globescout_bloc_01/screens/settings_screen.dart';
 import 'package:globescout_bloc_01/screens/stats_screen.dart';
 import 'package:player_repository/player_repository.dart';
@@ -53,6 +54,7 @@ class App extends StatelessWidget {
           "/add_scouting": (context) => AddScoutingScreen(),
           "/stats": (context) => StatsScreen(),
           "/settings": (context) => SettingsScreen(),
+          "/scouting": (context) => ScoutingScreen(),
         },
         initialRoute: "/",
         title: "Globescout Bloc",
