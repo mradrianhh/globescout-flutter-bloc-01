@@ -18,7 +18,7 @@ class StatsScreen extends StatelessWidget {
           itemCount: 10,
           itemBuilder: (context, index) {
             if(index == 0) {
-              return AddTile(addTapped: null, text: "ADD NEW STAT");
+              return AddTile(addTapped: () => Navigator.of(context).pushNamed("/add_stat"), text: "ADD NEW STAT");
             }
             return StatTile();
           }
