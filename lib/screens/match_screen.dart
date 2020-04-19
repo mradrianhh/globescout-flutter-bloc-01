@@ -11,7 +11,7 @@ class MatchScreen extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.arrow_forward),
             onPressed: () => Navigator.of(context).pushNamed("/post_match"),
-          )
+          ),
         ],
       ),
     );
