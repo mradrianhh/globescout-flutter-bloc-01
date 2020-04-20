@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:globescout_bloc_01/widgets/match_header.dart';
 
 class MatchScreen extends StatelessWidget {
   @override
@@ -14,6 +15,8 @@ class MatchScreen extends StatelessWidget {
           ),
         ],
       ),
+      backgroundColor: Colors.white,
+      body: MatchHeader()
     );
   }
 }
