@@ -47,8 +47,8 @@ class MainScreen extends StatelessWidget {
                           Text("A scouting app",
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 22.0,
-                                fontWeight: FontWeight.w600,
+                                fontSize: 24.0,
+                                fontWeight: FontWeight.w400,
                               ))
                         ],
                       ),
@@ -61,6 +61,7 @@ class MainScreen extends StatelessWidget {
                           "Stats",
                           style: TextStyle(
                             fontSize: 22.0,
+                            fontWeight: FontWeight.w400
                           )
                         ),
                         onTap: () {
@@ -74,6 +75,7 @@ class MainScreen extends StatelessWidget {
                         'Settings', 
                         style: TextStyle(
                           fontSize: 22.0,
+                          fontWeight: FontWeight.w400
                         )
                       ),
                       onTap: () {

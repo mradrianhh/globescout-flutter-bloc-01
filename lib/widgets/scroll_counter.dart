@@ -45,15 +45,29 @@ class _ScrollCounterState extends State<ScrollCounter> {
             )
           ], 
         ),
-        child: Center(
-          child: Text(
-                _count.toString(),
-                style: TextStyle(
-                  color: widget.textColor,
-                  fontSize: widget.fontSize,
-                  fontWeight: widget.fontWeight,
-                )
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              "Kvalsund IL",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20.0,
+                fontWeight: FontWeight.w600,
               ),
+              textAlign: TextAlign.center,
+            ),
+            Center(
+              child: Text(
+                    _count.toString(),
+                    style: TextStyle(
+                      color: widget.textColor,
+                      fontSize: widget.fontSize,
+                      fontWeight: widget.fontWeight,
+                    )
+                  ),
+            ),
+          ],
         ),
       ),
     );

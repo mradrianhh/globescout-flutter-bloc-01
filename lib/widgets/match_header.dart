@@ -9,45 +9,18 @@ class MatchHeader extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: SizedBox(
         height: MediaQuery.of(context).size.height * 0.25,
-        child: Card(
-            color: ColorPalette.primaryColor,
-            elevation: 2.0,
+        child: Container(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        "Kvalsund IL",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 28.0,
-                        ),
-                      ),
-                    ),
-                    SizedBox(),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text("Hif/Stein",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 28.0,
-                          )),
-                    ),
-                  ],
-                ),
+              children: <Widget> [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     ScrollCounter(
-                      width: 100,
-                      height: 100,
-                      backgroundColor: Colors.blue,
+                      width: MediaQuery.of(context).size.width * 0.3,
+                      height: MediaQuery.of(context).size.width * 0.3,
+                      backgroundColor: ColorPalette.primaryColor,
                       textColor: Colors.white,
-                      fontSize: 50,
+                      fontSize: 60,
                       fontWeight: FontWeight.w600,
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -55,29 +28,32 @@ class MatchHeader extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Text("-",
                           style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 50.0,
+                            color: ColorPalette.secondaryDarkColor,
+                            fontSize: 70.0,
                             fontWeight: FontWeight.w600,
                           )),
                     ),
                     ScrollCounter(
-                      width: 100,
-                      height: 100,
-                      backgroundColor: Colors.blue,
+                      width: MediaQuery.of(context).size.width * 0.3,
+                      height: MediaQuery.of(context).size.width * 0.3,
+                      backgroundColor: ColorPalette.primaryColor,
                       textColor: Colors.white,
-                      fontSize: 50,
+                      fontSize: 60,
                       fontWeight: FontWeight.w600,
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ],
                 ),
-                Text(
-                  "1st half",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 28.0,
+                Padding(
+                  padding: const EdgeInsets.only(top: 10.0),
+                  child: Text(
+                    "1st half",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600
+                    )
                   ),
-                )
+                ),
               ],
             )),
       ),

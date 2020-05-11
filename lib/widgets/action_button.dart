@@ -15,7 +15,7 @@ class ActionButton extends StatelessWidget {
       child: Container(
         height: MediaQuery.of(context).size.height * 0.1,
         color: ColorPalette.primaryColor,
-        child: Center(
+        child: Center (
           child: Text(text,
               style: TextStyle(
                 color: Colors.white,
